@@ -15,7 +15,7 @@ class DatabaseManager{
         (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }
     
-    func addData(_ fruitType:FriutTypeModel ){
+    func addFruitTypeData(_ fruitType:FriutTypeModel ){
         
         let fruitTypeEntity = FruitTypeEntity(context: context) // User create
         fruitTypeEntity.fruitTypeName = fruitType.fruitTypeName
@@ -27,7 +27,7 @@ class DatabaseManager{
         }
     }
     
-    func fetchData()-> [FruitTypeEntity]{
+    func fetchAllFruitTypeData()-> [FruitTypeEntity]{
         var fruitsType: [FruitTypeEntity] = []
         
         do{
@@ -38,7 +38,7 @@ class DatabaseManager{
          return fruitsType
     }
     
-    func fetchSearchedData(keyword: String) -> [FruitTypeEntity] {
+    func fetchAllFruitTypeSearchedData(keyword: String) -> [FruitTypeEntity] {
         var searchFruitsType: [FruitTypeEntity] = []
         
         let fetchRequest: NSFetchRequest<FruitTypeEntity> = FruitTypeEntity.fetchRequest()
@@ -55,4 +55,22 @@ class DatabaseManager{
         return searchFruitsType
     }
     
+    func updateAllFruitTypeData(fruitType: FriutTypeModel, fruitTypeEntity: FruitTypeEntity){
+        fruitTypeEntity.fruitTypeName = fruitType.fruitTypeName
+        
+        do{
+            try context.save()
+        }catch{
+            print("User saving error:\(error)")
+        }
+    }
+    
+    func deleteAllFruitTypeData(fruitTypeEntity: FruitTypeEntity){
+        context.delete(fruitTypeEntity)
+        do{
+            try context.save()
+        }catch{
+            print("User saving error: \(error)")
+        }
+    }
 }

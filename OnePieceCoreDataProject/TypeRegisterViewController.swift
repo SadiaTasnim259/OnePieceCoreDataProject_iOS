@@ -10,12 +10,14 @@ import UIKit
 class TypeRegisterViewController: UIViewController {
     
     let databaseManager = DatabaseManager()
+    var existingFruitType: FruitTypeEntity?
 
     @IBOutlet weak var fruitTypeTextField: UITextField!
-    
+    @IBOutlet weak var saveButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        fruitTypeConfiguration()
     }
 
 
@@ -26,8 +28,16 @@ class TypeRegisterViewController: UIViewController {
         }
         
         let newFruitType = FriutTypeModel(fruitTypeName: fruitTypeName)
-        databaseManager.addData(newFruitType)
-        showAlert(message: "Fruit Type Added")
+        
+        if let existingFruitType{
+            //Update
+            databaseManager.updateAllFruitTypeData(fruitType: newFruitType, fruitTypeEntity: existingFruitType)
+            showAlert(message: "Fruit Type Updated")
+        }else{
+            //Add
+            databaseManager.addFruitTypeData(newFruitType)
+            showAlert(message: "Fruit Type Added")
+        }
     }
 }
 
@@ -52,3 +62,20 @@ class TypeRegisterViewController: UIViewController {
             self.present(alert, animated: true)
         }
     }
+
+
+// MARK: - Update user
+
+extension TypeRegisterViewController{
+    
+    func fruitTypeConfiguration(){
+        if let existingFruitType{
+            navigationItem.title = "Update Fruit Type"
+            saveButton.setTitle("Update", for: .normal)
+            fruitTypeTextField.text = existingFruitType.fruitTypeName
+        }else{
+            navigationItem.title = "Add Fruit Type"
+            saveButton.setTitle("Save", for: .normal)
+        }
+    }
+}
