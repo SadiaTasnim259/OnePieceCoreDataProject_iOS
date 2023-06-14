@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		045D29FE2A396DAF00E7F13F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D29FD2A396DAF00E7F13F /* AppDelegate.swift */; };
 		045D2A002A396DAF00E7F13F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D29FF2A396DAF00E7F13F /* SceneDelegate.swift */; };
-		045D2A022A396DAF00E7F13F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D2A012A396DAF00E7F13F /* ViewController.swift */; };
+		045D2A022A396DAF00E7F13F /* TypeRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D2A012A396DAF00E7F13F /* TypeRegisterViewController.swift */; };
 		045D2A052A396DAF00E7F13F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045D2A032A396DAF00E7F13F /* Main.storyboard */; };
 		045D2A082A396DAF00E7F13F /* OnePieceCoreDataProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 045D2A062A396DAF00E7F13F /* OnePieceCoreDataProject.xcdatamodeld */; };
 		045D2A0A2A396DB100E7F13F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045D2A092A396DB100E7F13F /* Assets.xcassets */; };
 		045D2A0D2A396DB100E7F13F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045D2A0B2A396DB100E7F13F /* LaunchScreen.storyboard */; };
+		045D2A152A3976A200E7F13F /* TypeDisplayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D2A142A3976A200E7F13F /* TypeDisplayListViewController.swift */; };
+		045D2A172A3982BF00E7F13F /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D2A162A3982BF00E7F13F /* UserModel.swift */; };
+		045D2A192A3983D800E7F13F /* Database Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D2A182A3983D800E7F13F /* Database Manager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		045D29FA2A396DAF00E7F13F /* OnePieceCoreDataProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnePieceCoreDataProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045D29FD2A396DAF00E7F13F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		045D29FF2A396DAF00E7F13F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		045D2A012A396DAF00E7F13F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		045D2A012A396DAF00E7F13F /* TypeRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeRegisterViewController.swift; sourceTree = "<group>"; };
 		045D2A042A396DAF00E7F13F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		045D2A072A396DAF00E7F13F /* OnePieceCoreDataProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OnePieceCoreDataProject.xcdatamodel; sourceTree = "<group>"; };
 		045D2A092A396DB100E7F13F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		045D2A0C2A396DB100E7F13F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		045D2A0E2A396DB100E7F13F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		045D2A142A3976A200E7F13F /* TypeDisplayListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeDisplayListViewController.swift; sourceTree = "<group>"; };
+		045D2A162A3982BF00E7F13F /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		045D2A182A3983D800E7F13F /* Database Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Database Manager.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +66,10 @@
 			children = (
 				045D29FD2A396DAF00E7F13F /* AppDelegate.swift */,
 				045D29FF2A396DAF00E7F13F /* SceneDelegate.swift */,
-				045D2A012A396DAF00E7F13F /* ViewController.swift */,
+				045D2A182A3983D800E7F13F /* Database Manager.swift */,
+				045D2A162A3982BF00E7F13F /* UserModel.swift */,
+				045D2A012A396DAF00E7F13F /* TypeRegisterViewController.swift */,
+				045D2A142A3976A200E7F13F /* TypeDisplayListViewController.swift */,
 				045D2A032A396DAF00E7F13F /* Main.storyboard */,
 				045D2A092A396DB100E7F13F /* Assets.xcassets */,
 				045D2A0B2A396DB100E7F13F /* LaunchScreen.storyboard */,
@@ -141,7 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				045D2A022A396DAF00E7F13F /* ViewController.swift in Sources */,
+				045D2A172A3982BF00E7F13F /* UserModel.swift in Sources */,
+				045D2A152A3976A200E7F13F /* TypeDisplayListViewController.swift in Sources */,
+				045D2A022A396DAF00E7F13F /* TypeRegisterViewController.swift in Sources */,
+				045D2A192A3983D800E7F13F /* Database Manager.swift in Sources */,
 				045D29FE2A396DAF00E7F13F /* AppDelegate.swift in Sources */,
 				045D2A082A396DAF00E7F13F /* OnePieceCoreDataProject.xcdatamodeld in Sources */,
 				045D2A002A396DAF00E7F13F /* SceneDelegate.swift in Sources */,
@@ -306,9 +318,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sadia.OnePieceCoreDataProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -334,9 +349,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sadia.OnePieceCoreDataProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
