@@ -15,6 +15,8 @@ class DatabaseManager{
         (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }
     
+    // MARK: - FruitTypeEntity
+    
     func addFruitTypeData(_ fruitType:FriutTypeModel ){
         
         let fruitTypeEntity = FruitTypeEntity(context: context) // User create
@@ -73,4 +75,37 @@ class DatabaseManager{
             print("User saving error: \(error)")
         }
     }
+    
+    // MARK: - FruitDetailsEntity data
+    
+    func addFruitDetailsData(_ fruitDetails:FruitDetailsModel ){
+        
+        let fruitDetailsEntity = FruitDetailsEntity(context: context)
+        fruitDetailsEntity.fruitName = fruitDetails.fruitName
+        fruitDetailsEntity.userName = fruitDetails.userName
+        fruitDetailsEntity.fruitType = fruitDetails.fruitType
+        fruitDetailsEntity.imageURL = fruitDetails.imageURL
+       
+        do{
+            try context.save()
+        }catch{
+            print("User saving error:\(error)")
+        }
+    }
+    
+    func fetchFruitDetailData(type: String) -> [FruitDetailsEntity] {
+        var fruitDetails: [FruitDetailsEntity] = []
+
+        let fetchRequest: NSFetchRequest<FruitDetailsEntity> = FruitDetailsEntity.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "fruitType == %@", type)
+
+        do {
+            fruitDetails = try context.fetch(fetchRequest)
+        } catch {
+            print("Fetch user error", error)
+        }
+
+        return fruitDetails
+    }
+
 }

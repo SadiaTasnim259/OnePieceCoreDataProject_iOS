@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="21G217" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="FruitDetailsEntity" representedClassName="FruitDetailsEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="fruitName" optional="YES" attributeType="String"/>
+        <attribute name="fruitType" optional="YES" attributeType="String"/>
+        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="userName" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="FruitTypeEntity" representedClassName="FruitTypeEntity" syncable="YES" codeGenerationType="class">
         <attribute name="fruitTypeName" optional="YES" attributeType="String"/>
     </entity>

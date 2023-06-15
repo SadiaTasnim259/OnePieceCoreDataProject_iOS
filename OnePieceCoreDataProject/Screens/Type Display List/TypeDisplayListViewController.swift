@@ -15,6 +15,7 @@ class TypeDisplayListViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     private var devilFruitType: [FruitTypeEntity] = []
+    var chosenRow:FruitTypeEntity?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +65,11 @@ extension TypeDisplayListViewController:UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             tableView.deselectRow(at: indexPath, animated: true)
+            chosenRow = devilFruitType[indexPath.row]
+        let fruitTypeDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "FruitTypeDetailViewController") as! FruitTypeDetailViewController
+        fruitTypeDetailViewController.fruitTypeName = chosenRow?.fruitTypeName
+        self.navigationController?.pushViewController(fruitTypeDetailViewController, animated: true)
+            
         }
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let update = UIContextualAction(style: .normal, title: "Update") { _, _, _ in
