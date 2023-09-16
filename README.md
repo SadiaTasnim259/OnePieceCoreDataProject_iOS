@@ -1,7 +1,13 @@
 # OnePieceCoreDataProject_iOS
 
 ## What is it?
-- 
-- Here we can save any person's name, phone number, Email, and pictures.
-- We can also delete and update the details.
+- It's a fun app where anime fruit types and users can be added.
+- User can be added, edited, and deleted.
 - There is also a search tab for searching for contacts.
+
+## Screenshots and App Walkthrough
+
+| App Walkthrough | Home Screen | Creating User Screen |
+| --- | --- | --- |
+
+
