@@ -1,4 +1,4 @@
-# OnePieceCoreDataProject_iOS
+# OnePiece
 
 ## What is it?
 - It's a fun app where anime fruit types and users can be added.
